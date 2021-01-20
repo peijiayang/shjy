@@ -30,7 +30,7 @@ public class ShjyOrderDetailsEntity implements Serializable {
     /**
      * 商品订单id
      */
-    private Integer orderId;
+    private Long orderId;
 
     /**
      * 商品id

@@ -2,7 +2,7 @@ package tech.binaryer.shjy.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import tech.binaryer.shjy.biz.dto.GoodsDto;
+import tech.binaryer.shjy.biz.dto.AddGoodsDto;
 import tech.binaryer.shjy.biz.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.ShjyGoodsService;
 
@@ -21,7 +21,7 @@ public class ShjyGoodsController {
     @Autowired
     private ShjyGoodsService shjyGoodsService;
     @GetMapping("/all")
-    ResponseMessage getAllGoods(@RequestBody GoodsDto goodsDto){
+    ResponseMessage getAllGoods(@RequestBody AddGoodsDto goodsDto){
         return shjyGoodsService.getGoodsMessage(goodsDto);
     }
 

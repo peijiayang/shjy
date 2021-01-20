@@ -6,7 +6,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tech.binaryer.shjy.biz.dto.GoodsDto;
+import tech.binaryer.shjy.biz.dto.AddGoodsDto;
 import tech.binaryer.shjy.biz.entity.ShjyGoodsEntity;
 import tech.binaryer.shjy.biz.mapper.ShjyGoodsMapper;
 import tech.binaryer.shjy.biz.message.ResponseMessage;
@@ -29,9 +29,9 @@ public class ShjyGoodsServiceImpl extends ServiceImpl<ShjyGoodsMapper, ShjyGoods
     private ShjyGoodsMapper shjyGoodsMapper;
 
     @Override
-    public ResponseMessage getGoodsMessage(GoodsDto goodsDto) {
+    public ResponseMessage getGoodsMessage(AddGoodsDto goodsDto) {
         QueryWrapper queryWrapper = new QueryWrapper();
-        PageHelper.startPage(goodsDto.getPageIndex(),goodsDto.getPageSize());
+        //PageHelper.startPage(goodsDto.getPageIndex(),goodsDto.getPageSize());
         PageInfo pageInfo = new PageInfo(shjyGoodsMapper.selectList(queryWrapper));
         return ResponseMessage.ok(pageInfo);
     }
