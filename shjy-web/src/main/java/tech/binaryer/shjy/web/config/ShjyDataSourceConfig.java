@@ -17,7 +17,7 @@ import javax.sql.DataSource;
  * @create: 2020-08-12 09:36
  **/
 @Configuration
-@MapperScan(value = {"tech.binaryer.shjy.biz.repository"})
+@MapperScan(value = {"tech.binaryer.shjy.biz.mapper"})
 public class ShjyDataSourceConfig {
 
     @Bean(name = "shjyDataSource")
