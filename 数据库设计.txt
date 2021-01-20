@@ -1,0 +1,10 @@
+表1-【商品信息：shjy_goods】
+商品id：自增id，名称：goods_name，体积/重量：goods_specifically，度数：goods_degree，官方售价：goods_guiding_price，团购价：goods_group_price，所属系列：goods_series，商品图片名称：goods_picture
+
+表2-【所属系列：shjy_series】
+系列名称：series_name，系列id：series_id 
+（0：茅台，1：汾酒，2：五粮液，3：金沙，4：钓鱼台，5：习酒，6：琅玡台，7：洋河，8：郎酒，9：泸州，
+   10：酱香型，11：口子窖，12：一品景芝，13：法国红酒，14：智利红酒，15：澳大利亚红酒，16：礼品，17：茶叶）
+
+表3-【商品订单】
+订单id，订单id：时间戳形式，下单日期：时间戳UTC，

@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: Qingdao0208@#
+    url: jdbc:mysql://120.53.125.71:3306/shjy?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    schema:
+    #      - classpath:sql/department.sql
+    #      - classpath:sql/employee.sql
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #  数据源其他配置
+    max-active: 20
+    min-idle: 3
+    initial-size: 1
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 'x' FROM DUAL
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    pool-prepared-statements: false
+    max-pool-prepared-statement-per-connection-size: -1
+    use-global-data-source-stat: false
+    # filters: stat,wall
+    default-auto-commit: false
+    keep-alive: true
+    filter:
+      wall:
+        config:
+          multi-statement-allow: true
+          none-base-statement-allow: true
+  resources:
+    static-locations: file:..//img
+
+#mybatis:
+  # 配置 mapping 所在的路径
+#  mapper-locations: classpath*:mapping/*.xml
+  # 配置 mybaties 别名
+#  type-aliases-package: com.lhkk.cabinet.biz.dto
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+    map-underscore-to-camel-case: true
+  type-aliases-package: tech.binaryer.shjy.biz.entity
+  mapper-locations: classpath*:mapping/*.xml
+
+
+
+
