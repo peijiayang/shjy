@@ -20,7 +20,7 @@ public interface ShjyGoodsService {
     ResponseMessage getGoodsMessage(GoodsDto goodsDto);
 
     /**
-     * 根据所属系类查询
+     * 根据所属系类查询-小程序
      * @param goodsSeries
      * @return
      */

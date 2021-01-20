@@ -1,7 +1,11 @@
 server:
   port: 8080
 
+
 spring:
+  output:
+    ansi:
+      enabled: ALWAYS
   datasource:
     username: root
     password: Qingdao0208@#

@@ -6,6 +6,15 @@ import tech.binaryer.shjy.biz.dto.GoodsDto;
 import tech.binaryer.shjy.biz.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.ShjyGoodsService;
 
+/**
+ * <p>
+ *  控制类
+ * </p>
+ *
+ * @author peijiayang
+ * @since 2021-01-00
+ */
+
 @RestController
 @RequestMapping("/goods")
 public class ShjyGoodsController {
