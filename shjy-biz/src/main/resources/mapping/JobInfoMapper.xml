@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tech.binaryer.shjy.biz.mapper.JobInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="tech.binaryer.shjy.biz.entity.JobInfoEntity">
+        <id column="job_id" property="jobId"/>
+        <result column="job_name" property="jobName"/>
+        <result column="job_content" property="jobContent"/>
+        <result column="job_param" property="jobParam"/>
+        <result column="update_id" property="updateId"/>
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        job_id, job_name, job_content, job_param, update_id
+    </sql>
+
+    <select id="getJobInfo" resultType="tech.binaryer.shjy.biz.dto.JobInfoDto">
+       select j.job_id,j.job_name,j.job_content,j.job_param, user.real_name from job_info as j left join user on j.update_id=user.id order by j.job_id
+    </select>
+
+</mapper>
