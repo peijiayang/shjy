@@ -8,7 +8,7 @@ import tech.binaryer.shjy.biz.entity.ShjyOrderEntity;
 import tech.binaryer.shjy.biz.mapper.ShjyOrderMapper;
 import tech.binaryer.shjy.biz.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.ShjyOrderService;
-import tech.binaryer.shjy.biz.util.SnowflakeIdWorker;
+import tech.binaryer.shjy.biz.common.util.SnowflakeIdWorker;
 import java.util.Date;
 
 /**

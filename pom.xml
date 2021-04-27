@@ -11,6 +11,7 @@
     <modules>
         <module>shjy-web</module>
         <module>shjy-biz</module>
+        <module>shjy-oauth</module>
     </modules>
     <!-- springboot引用 -->
 
@@ -106,6 +107,19 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.8</version>
+            </dependency>
+
+            <!--JWT token认证-->
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>3.4.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.9.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

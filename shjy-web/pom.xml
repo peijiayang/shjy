@@ -33,6 +33,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -44,7 +45,7 @@
                 <configuration>
                     <fork>true</fork>
                     <includeSystemScope>true</includeSystemScope>
-                    <mainClass>tech.binaryer.shjy.web.CabinetSpringbootApplication</mainClass>
+                    <mainClass>tech.binaryer.shjy.web.ShjySpringbootApplication</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>

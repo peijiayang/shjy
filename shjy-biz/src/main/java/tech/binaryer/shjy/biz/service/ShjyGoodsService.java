@@ -1,6 +1,9 @@
 package tech.binaryer.shjy.biz.service;
 
 import tech.binaryer.shjy.biz.dto.AddGoodsDto;
+import tech.binaryer.shjy.biz.dto.GoodsDto;
+import tech.binaryer.shjy.biz.dto.page.QueryParam;
+import tech.binaryer.shjy.biz.entity.ShjyGoodsEntity;
 import tech.binaryer.shjy.biz.message.ResponseMessage;
 
 /**
@@ -17,7 +20,7 @@ public interface ShjyGoodsService {
      * @param goodsDto
      * @return
      */
-    ResponseMessage getGoodsMessage(AddGoodsDto goodsDto);
+    ResponseMessage getGoodsMessage(GoodsDto goodsDto);
 
     /**
      * 根据所属系类查询-小程序

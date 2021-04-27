@@ -52,7 +52,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
     map-underscore-to-camel-case: true
   type-aliases-package: tech.binaryer.shjy.biz.entity
-  mapper-locations: classpath*:mapping/*.xml
+  mapper-locations: classpath*:mapping/**/*.xml
 
 
 

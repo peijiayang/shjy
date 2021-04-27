@@ -1,4 +1,4 @@
-package tech.binaryer.shjy.biz.util;
+package tech.binaryer.shjy.biz.common.util;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;

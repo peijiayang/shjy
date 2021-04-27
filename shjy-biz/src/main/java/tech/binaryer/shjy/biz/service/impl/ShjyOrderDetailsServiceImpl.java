@@ -1,9 +1,6 @@
 package tech.binaryer.shjy.biz.service.impl;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +15,9 @@ import tech.binaryer.shjy.biz.mapper.ShjyOrderDetailsMapper;
 import tech.binaryer.shjy.biz.mapper.ShjyOrderMapper;
 import tech.binaryer.shjy.biz.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.ShjyOrderDetailsService;
-import tech.binaryer.shjy.biz.util.SnowflakeIdWorker;
+import tech.binaryer.shjy.biz.common.util.SnowflakeIdWorker;
 
-import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
