@@ -1,4 +1,4 @@
-package tech.binaryer.shjy.biz.message;
+package tech.binaryer.shjy.biz.common.message;
 
 import com.alibaba.fastjson.JSON;
 

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import tech.binaryer.shjy.biz.common.annotation.PassToken;
 import tech.binaryer.shjy.biz.dto.UserDto;
 import tech.binaryer.shjy.biz.entity.UserEntity;
-import tech.binaryer.shjy.biz.message.ResponseMessage;
+import tech.binaryer.shjy.biz.common.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.UserService;
 
 import java.util.Map;

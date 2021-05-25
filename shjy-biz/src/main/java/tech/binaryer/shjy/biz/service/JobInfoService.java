@@ -3,7 +3,7 @@ package tech.binaryer.shjy.biz.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import tech.binaryer.shjy.biz.entity.JobInfoEntity;
-import tech.binaryer.shjy.biz.message.ResponseMessage;
+import tech.binaryer.shjy.biz.common.message.ResponseMessage;
 
 
 /**

@@ -9,7 +9,7 @@ spring:
   datasource:
     username: root
     password: Qingdao0208@#
-    url: jdbc:mysql://120.53.125.71:3306/shjy?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://120.53.125.71:3306/shjy?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     #    schema:
     #      - classpath:sql/department.sql

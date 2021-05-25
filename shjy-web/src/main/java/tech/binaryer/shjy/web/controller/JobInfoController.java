@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import tech.binaryer.shjy.biz.common.annotation.UserLoginToken;
 import tech.binaryer.shjy.biz.entity.JobInfoEntity;
-import tech.binaryer.shjy.biz.message.ResponseMessage;
+import tech.binaryer.shjy.biz.common.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.JobInfoService;
 
 

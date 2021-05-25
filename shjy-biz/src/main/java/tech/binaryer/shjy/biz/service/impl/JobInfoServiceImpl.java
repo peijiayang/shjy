@@ -1,10 +1,7 @@
 package tech.binaryer.shjy.biz.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -12,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tech.binaryer.shjy.biz.entity.JobInfoEntity;
 import tech.binaryer.shjy.biz.mapper.JobInfoMapper;
-import tech.binaryer.shjy.biz.message.ResponseMessage;
+import tech.binaryer.shjy.biz.common.message.ResponseMessage;
 import tech.binaryer.shjy.biz.service.JobInfoService;
 import tech.binaryer.shjy.biz.common.util.UserUtils;
 
@@ -79,8 +76,6 @@ public class JobInfoServiceImpl extends ServiceImpl<JobInfoMapper, JobInfoEntity
            if (jobParam.equals("null")|jobParam==null|jobParam=="null"|"null".equals(jobParam)|jobParam.equals("")){
                 jobInfoEntity.setJobParam("");
             }
-            System.out.println("9999999999999999999999999999999");
-            System.out.println(jobParam);
             jobInfoEntity.setUpdateId(UserUtils.getUserId()).setJobParam(jobParam.trim());
             jobInfoMapper.update(jobInfoEntity,updateWrapper);
             return ResponseMessage.ok("参数更新成功!");

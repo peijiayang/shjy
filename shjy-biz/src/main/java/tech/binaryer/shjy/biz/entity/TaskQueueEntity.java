@@ -1,15 +1,14 @@
 package tech.binaryer.shjy.biz.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-
-import java.io.Serializable;
-import java.util.Date;
-
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -17,31 +16,32 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author peijiayang
- * @since 2021-01-19
+ * @since 2021-05-02
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("shjy_order")
-public class ShjyOrderEntity implements Serializable {
+@TableName("task_queue")
+public class TaskQueueEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 订单id
-     */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    /**
-     * 订单编号id
-     */
-    private Long goodsOrder;
+    private String taskName;
 
-    /**
-     * 创建日期
-     */
-    private Date goodsOrderCreatetime;
+    private String taskData;
+
+    private String taskStatus;
+
+    private Integer taskCategory;
+
+    private String exceptionFlow;
+
+    private Integer createId;
+
+    private Date createTime;
 
 
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tech.binaryer.shjy.biz.mapper.TaskQueueMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="tech.binaryer.shjy.biz.entity.TaskQueueEntity">
+        <id column="id" property="id"/>
+        <result column="task_name" property="taskName"/>
+        <result column="task_data" property="taskData"/>
+        <result column="task_status" property="taskStatus"/>
+        <result column="task_category" property="taskCategory"/>
+        <result column="exception_flow" property="exceptionFlow"/>
+        <result column="create_id" property="createId"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, task_name, task_data, task_status, task_category, exception_flow, create_id, create_time
+    </sql>
+    <select id="getTaskInfo" resultType="tech.binaryer.shjy.biz.dto.TaskInfoDto">
+        select t.task_name,t.task_data,t.exception_flow,u.real_name,t.create_time,t.task_status from task_queue as t
+        left join user as u on u.id = t.create_id
+        <where>
+            <if test="taskData != null and taskData != ''">
+
+                and task_data =#{taskData}
+            </if>
+            <if test="taskStatus != null and taskStatus != ''">
+
+                and task_status=#{taskStatus}
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+
+</mapper>

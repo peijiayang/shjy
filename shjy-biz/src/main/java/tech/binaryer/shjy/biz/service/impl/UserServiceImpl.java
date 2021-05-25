@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tech.binaryer.shjy.biz.common.util.SignParams;
 import tech.binaryer.shjy.biz.dto.UserDto;
-import tech.binaryer.shjy.biz.message.ResponseMessage;
+import tech.binaryer.shjy.biz.common.message.ResponseMessage;
 import tech.binaryer.shjy.biz.entity.UserEntity;
 import tech.binaryer.shjy.biz.mapper.UserMapper;
 import tech.binaryer.shjy.biz.service.UserService;
@@ -52,11 +52,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
             authorizationMap.put("success", true);
             authorizationMap.put("username",username );
             authorizationMap.put("realName", realName);
-            authorizationMap.put("token", JwtUtils.createJWT(SignParams.SIGN_JWC, 1000 * 600, username,useId));
+            authorizationMap.put("token", JwtUtils.createJWT(SignParams.SIGN_JWC, 1000 * 60000, username,useId));
             return authorizationMap;
         } else {
             authorizationMap.put("success", false);
-            authorizationMap.put("msg", "账号或密码错误！");
+            authorizationMap.put("message", "账号或密码错误！");
             return authorizationMap;
         }
     }
@@ -71,6 +71,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
             if (ObjectUtils.isNotNull(userMapper.selectOne(lambdaQueryWrapper))) {
                 return ResponseMessage.ok("用户名已存在！");
             }
+
             return ResponseMessage.ok(userMapper.insert(userEntityDto));
         } catch (Exception e) {
             return ResponseMessage.error("用户插入异常");
